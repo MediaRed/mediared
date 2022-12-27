@@ -871,7 +871,7 @@ a.button {
 .top.header > div {
   display: flex;
   align-items: flex-end;
-  justify-content: center;
+  justify-content: space-between;
   margin: 0;
   padding: 0;
   width: 100vw;
