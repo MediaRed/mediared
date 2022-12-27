@@ -1629,6 +1629,12 @@ a.button {
   .post__page {
     margin: .5rem;
   }
+  .col2 {
+    min-width: 100%;
+  }
+  .grid {
+    grid-auto-flow: dense;
+  }
 }
 .wrapper {
   margin: 0;
