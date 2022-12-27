@@ -1615,7 +1615,21 @@ a.button {
     padding-top: var(--header-height);
   }
 }
-
+@media all and (max-width: 37.5em) {
+  .container {
+    padding-top: 0;
+  }
+  .cards {
+    margin: 0;
+    flex-direction: column;
+  }
+  .cards__item {
+    width: 100%;
+  }
+  .post__page {
+    margin: .5rem;
+  }
+}
 .wrapper {
   margin: 0;
   padding: 0;
@@ -2080,6 +2094,9 @@ a.button {
 @media all and (min-width: 56.25em) {
   .post__entry {
     margin-top: 0;
+  }
+  .post__page {
+    margin: .5rem;
   }
 }
 
