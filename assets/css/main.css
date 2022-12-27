@@ -705,6 +705,8 @@ textarea {
 }
 .page, .wrapper {
   min-height: 80vh;
+  background-color: var(--primaryBodyColor);
+  color:  var(--primaryBodyTextColor);
 }
 .cards {
     transition: 0.3s;
@@ -2686,7 +2688,7 @@ a.button {
   text-transform: uppercase;
 }
 .footer__social svg {
-  fill: var(--primaryFooterColor);
+  fill: var(--primaryFooterTextColor);
   height: 1rem;
   margin: 1.5rem 0.375rem 0;
   opacity: 0.6;
