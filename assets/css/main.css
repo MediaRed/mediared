@@ -696,7 +696,7 @@ textarea {
 /*
  * Put your custom CSS code here
  */
- .cards-wrapper {
+  .cards-wrapper {
   display: flex;
   margin: -1rem;
   outline: none;
@@ -730,7 +730,7 @@ textarea {
     object-fit: cover;
     z-index: 1;
 }
-}
+
 .cards__item:hover > a:after , .hero__image:hover > a:after{
   background: var(--dark);
   content: "";
@@ -761,10 +761,7 @@ textarea {
     transition: all 0.3s ease-out;
     overflow: hidden;
 }
-.cards__item a > h3, 
-  .card-title, 
-  .hero > header > h1, 
-  .c-card__header > h2 > a  {
+.cards__item a > h3, .card-title {
     text-align: center;
     width: 100%;
     position: absolute;
@@ -848,12 +845,7 @@ a.button {
   }
 }
 .top > div {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -ms-grid;
-  display: flex;
-  margin: 0 auto;
+  margin: 0;
   max-width: var(--page-width);
   position: relative;
   width: 100%;
@@ -862,7 +854,7 @@ a.button {
   .top > div {
     -ms-grid-columns: 1fr auto auto;
     grid-template-columns: 1fr auto auto;
-        grid-template-areas: "logo search menu";
+    grid-template-areas: "logo search menu";
   }
 }
 .top.header {
@@ -875,6 +867,15 @@ a.button {
   height: var(--header-height);
   display: flex;
   width: 100vw;
+}
+.top.header > div {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: var(--header-height);
 }
 .top.is-visible {
   -webkit-box-align: center;
@@ -898,18 +899,13 @@ a.button {
 }
 @media all and (min-width: 56.25em) {
   .top.is-visible > div {
-    -ms-grid-columns: 1fr auto auto;
-    grid-template-columns: 1fr auto auto;
-        grid-template-areas: "logo menu search";
-    margin: 0 auto;
+    margin: 0;
     max-width: var(--page-width);
   }
 }
 .top.is-visible .logo {
   font-size: 1.7875512975rem;
-  grid-area: logo;
   padding: 0;
-  text-align: left;
 }
 .top.is-visible .navbar {
   text-align: right;
@@ -946,7 +942,7 @@ a.button {
 @media all and (min-width: 56.25em) {
   .logo {
     font-size: 3.6355864383rem;
-    padding: 1.5rem 0 0.75rem;
+    padding: 0;
     text-align: center;
   }
 }
@@ -957,6 +953,7 @@ a.button {
   outline: none;
 }
 .logo > img {
+  vertical-align: bottom;
   max-height: var(--header-height);
   width: auto;
 }
@@ -1151,8 +1148,7 @@ a.button {
 
 @media all and (max-width: 56.1875em){
   .top.is-visible .logo {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
+
   }
   .search {
     -ms-grid-row: 1;
@@ -1166,8 +1162,7 @@ a.button {
 
 @media all and (min-width: 56.25em){
   .top.is-visible > div > .logo {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
+
   }
   .top.is-visible > div > .search {
     -ms-grid-row: 1;
@@ -1178,10 +1173,12 @@ a.button {
     -ms-grid-column: 2;
   }
 }
+
 .navbar .navbar__menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1193,6 +1190,11 @@ a.button {
   .navbar .navbar__menu {
     display: none;
   }
+}
+.nav_bar {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 }
 .navbar .navbar__menu li {
   display: block;
@@ -2059,23 +2061,25 @@ a.button {
   color: var(--gray-1);
   font-size: 0.8239746086rem;
 }
-.post .post__entry {
-  margin: 3rem;
-}
-.post__entry > div, .post__entry > p {
+.post_entry > div, .post_entry > p {
   margin-left: 5rem;
   padding-left: 5rem;
   display: flex;
   flex-direction: column;
+  width: 90vw;
 }
 
+.post__page {
+  margin: calc(3rem + 1.5vw);
+}
 @media all and (min-width: 56.25em) {
   .post__entry {
-    margin: 0;
+    margin-top: 0;
   }
 }
+
 .post__entry > :nth-child(1) {
-  margin: 0;
+  margin-top: 0;
 }
 .post__entry a:not(.btn):not([type=button]):not([type=submit]):not(button):hover {
   text-decoration: underline;
