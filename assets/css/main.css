@@ -805,13 +805,15 @@ textarea {
   /* Uncomment these lines if you want to have the standard Trello behavior instead of the column wrapping */
   grid-auto-flow: column;
   grid-auto-columns: minmax(260px, 1fr); 
+  margin: 0;
+  padding: 0;
 }
 
 .grid-item {
   display: grid;
   grid-template-rows: auto;
   grid-gap: .5rem;
-  margin: .5rem 0;  
+  margin: 0;  
 
 }
 .grid-item h2  {
@@ -2710,6 +2712,12 @@ a.button {
   font-size: 0.6789341556rem;
   letter-spacing: 1px;
   text-transform: uppercase;
+}
+.footer__social {
+  bottom: 2rem;
+  right: 2rem;
+  position: absolute;
+  width: auto;
 }
 .footer__social svg {
   fill: var(--primaryFooterTextColor);
