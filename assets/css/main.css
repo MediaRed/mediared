@@ -945,6 +945,7 @@ a.button {
 }
 @media all and (min-width: 56.25em) {
   .logo {
+    margin-left: 2rem;
     font-size: 3.6355864383rem;
     padding: 0;
     text-align: center;
