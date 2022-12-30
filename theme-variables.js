@@ -296,6 +296,7 @@ var generateThemeVariables = function(params) {
             --header-height:      ${params.navbarHeight};
             --hero-min-height:    ${params.heightMinHero};
             --hero-max-height:    ${params.heightMaxHero};
+            --hero-aspect-ratio:  ${params.aspectRatioHero};
             --primaryHeaderColor  ${params.primaryHeaderColor};
             --primaryHeaderTextColor  ${params.primaryHeaderTextColor};
             --primaryBodyColor  ${params.primaryBodyColor};
