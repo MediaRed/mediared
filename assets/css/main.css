@@ -2158,15 +2158,15 @@ a.button {
   font-size: 0.8239746086rem;
 }
 .post_entry > div, .post_entry > p {
-  margin-left: 5rem;
-  padding-left: 5rem;
+  margin-left: var(--page-margin);
+  padding-left: var(--page-margin);
   display: flex;
   flex-direction: column;
   width: 90vw;
 }
 
 .post__page {
-  margin: calc(3rem + 1.5vw);
+  margin: var(--page-margin);
 }
 @media all and (min-width: 56.25em) {
   .post__entry {
