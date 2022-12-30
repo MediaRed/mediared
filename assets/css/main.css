@@ -696,6 +696,39 @@ textarea {
 /*
  * Put your custom CSS code here
  */
+ .circular, .avatar > img {
+  aspect-ratio: 1;
+  border-radius: 50%;
+  max-width: unset;
+  width: auto;
+  object-fit: cover;
+}
+.card_wrapper {
+overflow: hidden;
+}
+.cards__item.external , .card-title.external, .card-caption.external, .card_image.external {
+aspect-ratio: unset;
+text-shadow: unset;
+overflow: auto;
+color: var(--primaryBodyTextColor);
+max-height: inherit;
+width: -webkit-fill-available;
+position: inherit;
+}
+.card_image.circular {
+aspect-ratio: 1;
+width: -webkit-fill-available;
+}
+.card_link.external {
+position: inherit;
+aspect-ratio: unset;
+overflow: auto;
+}
+.external {
+max-height: auto;
+aspect-ratio: unset;
+overflow: auto;
+}
   .cards-wrapper {
   display: flex;
   margin: 1rem;
