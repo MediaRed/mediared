@@ -756,6 +756,9 @@ textarea {
 .card_wrapper, .card-title.external, .card-subtitle.external {
   overflow: hidden;
 }
+.card_wrapper {
+  min-height: 20vh;
+}
 .card_image.circular {
   aspect-ratio: 1;
   width: -webkit-fill-available;
