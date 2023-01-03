@@ -820,6 +820,9 @@ overflow: auto;
   overflow: hidden;
   width: 100%;
 }
+.hero__image:hover > a:after{ 
+  max-height: var(--hero-max-height)
+}
 .cards__item:hover img {
   -webkit-transform: scale(1.6) rotate(-10deg);
           transform: scale(1.6) rotate(-10deg);
@@ -1828,9 +1831,10 @@ a.button {
   position: relative;
   top: 0;
   left: 0;
+  overflow: hidden;
   z-index: 1;
   min-height: var(--hero-min-height);
-  max-height: var(--hero-max-height);
+  height: var(--hero-max-height);
 }
 .hero.hero--full h1 sup {
   display: none;
