@@ -701,31 +701,31 @@ textarea {
   width: 100%;   
  }
  .col2 {
-   width: 49%;   
+   width: 48%;   
  }
  .col3 {
-   width: 32%;   
+   width: 30%;   
  }
  .col4 {
-   width: 24%;   
+   width: 23%;   
  }
  .col5 {
-   width: 19%;   
+   width: 18%;   
  }
  .col6 {
-   width: 16%;   
+   width: 15%;   
  }
  .col7 {
-   width: 14%;   
+   width: 13%;   
  }
  .col8 {
-   width: 12%;   
- }
- .col9 {
    width: 11%;   
  }
- .col10 {
+ .col9 {
    width: 10%;   
+ }
+ .col10 {
+   width: 8%;   
  }
  .circular, .avatar > img {
   aspect-ratio: 1;
