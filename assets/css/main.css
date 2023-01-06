@@ -781,6 +781,10 @@ overflow: auto;
   outline: none;
   position: relative;
 }
+.post__page .cards-wrapper {
+  margin-left: 0;
+  margin-right: 0;
+}
 .page, .wrapper {
   min-height: 80vh;
   background-color: var(--primaryBodyColor);
