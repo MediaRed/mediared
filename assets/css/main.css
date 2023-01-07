@@ -743,10 +743,15 @@ textarea {
   display: none;
 }
 .card_wrapper.circular {
+  /* border-color: var(--primaryHeaderColor);
+  border-style: solid;
+  border-width: 1rem; */
+  border-radius: 50%;
+}
+.card_wrapper.circular:hover {
   border-color: var(--primaryHeaderColor);
   border-style: solid;
-  border-width: thick;
-  border-radius: 50%;
+  border-width: 1rem;
 }
 
 .cards__item.external , .card-title.external, .card-subtitle.external, .card-caption.external, .card_image.external {
@@ -899,24 +904,23 @@ overflow: auto;
 
 .grid {
 
-  display: grid;
-  grid-gap: .5rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
   align-items: flex-start;
   /* Uncomment these lines if you want to have the standard Trello behavior instead of the column wrapping */
-  grid-auto-flow: column;
-  grid-auto-columns: minmax(260px, 1fr); 
   margin: 0;
   padding: 0;
 }
 
 .grid-item {
-  display: grid;
-  grid-template-rows: auto;
-  grid-gap: .5rem;
+  
   margin: 0;  
 
 }
 .grid-item.col2 {
+  flex: 50%;
   width: 100%
 }
 .grid-item h2  {
@@ -2828,10 +2832,7 @@ a.button {
   text-transform: uppercase;
 }
 .footer__social {
-  top: -6rem;
-  right: -16rem;
-  position: relative;
-  width: auto;
+  width: 100%;
 }
 .footer__social svg {
   fill: var(--primaryFooterTextColor);
