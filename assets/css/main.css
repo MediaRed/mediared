@@ -907,6 +907,9 @@ overflow: auto;
   margin: 0;  
 
 }
+.grid-item.col2 {
+  width: 100%
+}
 .grid-item h2  {
   color: var(--primaryBodyTextColor);
 }
