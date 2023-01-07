@@ -696,12 +696,98 @@ textarea {
 /*
  * Put your custom CSS code here
  */
-  .cards-wrapper {
+ .col1 {
+  width: 100%;   
+ }
+ .col2 {
+   width: 48%;   
+ }
+ .col3 {
+   width: 30%;   
+ }
+ .col4 {
+   width: 23%;   
+ }
+ .col5 {
+   width: 18%;   
+ }
+ .col6 {
+   width: 15%;   
+ }
+ .col7 {
+   width: 13%;   
+ }
+ .col8 {
+   width: 11%;   
+ }
+ .col9 {
+   width: 10%;   
+ }
+ .col10 {
+   width: 8%;   
+ }
+ .circular, .avatar > img {
+  aspect-ratio: 1;
+  border-radius: 50%;
+  max-width: unset;
+  width: auto;
+  object-fit: cover;
+}
+
+.card-subtitle.external {
+  text-align: center;
+}
+.card-subtitle.internal {
+  display: none;
+}
+.card_wrapper.circular {
+  border-radius: 50%;
+}
+
+.cards__item.external , .card-title.external, .card-subtitle.external, .card-caption.external, .card_image.external {
+  aspect-ratio: unset;
+  text-shadow: unset;
+  overflow: auto;
+  color: var(--primaryBodyTextColor);
+  max-height: inherit;
+  position: inherit;
+}
+.card_wrapper, .card-title.external, .card-subtitle.external {
+  overflow: hidden;
+}
+.card_wrapper {
+  min-height: 20vh;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+.card_image.circular {
+  aspect-ratio: 1;
+  width: -webkit-fill-available;
+}
+.card_link.external {
+position: inherit;
+aspect-ratio: unset;
+overflow: auto;
+}
+.external {
+max-height: auto;
+aspect-ratio: unset;
+overflow: auto;
+}
+
+.cards-wrapper {
   display: flex;
-  margin: 1rem;
+  align-items: center;
+  justify-content: center;
+  margin-left: var(--page-margin);
+  margin-right: var(--page-margin);
   outline: none;
   position: relative;
-
+}
+.post__page .cards-wrapper {
+  margin-left: 0;
+  margin-right: 0;
 }
 .page, .wrapper {
   min-height: 80vh;
@@ -815,6 +901,9 @@ textarea {
   grid-gap: .5rem;
   margin: 0;  
 
+}
+.grid-item.col2 {
+  width: 100%
 }
 .grid-item h2  {
   color: var(--primaryBodyTextColor);
