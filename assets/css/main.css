@@ -146,6 +146,7 @@ a {
 }
 a:hover {
   color: var(--color);
+  text-decoration: none;
 }
 a:active {
   color: var(--color);
@@ -757,6 +758,9 @@ textarea {
 }
 .card-title.external {
   font-size: 1.2em;
+}
+.cards .cards__item.external .card-title:hover, .cards .cards__item.external .card-subtitle:hover, .cards .cards__item.external .card-caption:hover {
+  text-decoration: none;
 }
 .card_wrapper {
   min-height: 20vh;
