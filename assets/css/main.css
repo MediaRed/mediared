@@ -746,12 +746,12 @@ textarea {
   /* border-color: var(--primaryHeaderColor);
   border-style: solid;
   border-width: 1rem; */
+  border: solid 0rem var(--primaryHeaderColor);
+  transition: border-width 0.6s ease-out;
   border-radius: 50%;
 }
 .card_wrapper.circular:hover {
-  border-color: var(--primaryHeaderColor);
-  border-style: solid;
-  border-width: 1rem;
+  border: solid .3rem var(--primaryHeaderColor);
 }
 
 .cards__item.external , .card-title.external, .card-subtitle.external, .card-caption.external, .card_image.external {
@@ -906,7 +906,7 @@ overflow: auto;
 
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: inherit;
   flex-direction: row;
   align-items: flex-start;
   /* Uncomment these lines if you want to have the standard Trello behavior instead of the column wrapping */
