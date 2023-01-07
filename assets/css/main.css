@@ -758,6 +758,9 @@ textarea {
 }
 .card_wrapper {
   min-height: 20vh;
+  display:flex;
+  align-items: center;
+  justify-content: center;
 }
 .card_image.circular {
   aspect-ratio: 1;
