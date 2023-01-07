@@ -748,13 +748,15 @@ textarea {
 .cards__item.external , .card-title.external, .card-subtitle.external, .card-caption.external, .card_image.external {
   aspect-ratio: unset;
   text-shadow: unset;
-  overflow: auto;
   color: var(--primaryBodyTextColor);
   max-height: inherit;
   position: inherit;
 }
-.card_wrapper, .card-title.external, .card-subtitle.external {
+.card_wrapper, .card-title.external, .card-subtitle.external, .card-caption.external {
   overflow: hidden;
+}
+.card-title.external {
+  font-size: 1.2em;
 }
 .card_wrapper {
   min-height: 20vh;
@@ -801,6 +803,7 @@ overflow: auto;
     transition: 0.3s;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     border-radius: 5px;
     margin-right: 1em;
     overflow: hidden;
@@ -1771,6 +1774,7 @@ a.button {
  display: flex;
  margin-left: 3rem;
  margin-right: 3rem;
+ margin-bottom: 3rem;
  padding-left: 3rem;
  padding-top: 3rem;
  padding-right: 3rem;
@@ -2199,6 +2203,7 @@ a.button {
   }
   .post__page {
     margin-top: 1rem;
+    margin-bottom: 1rem;
     margin-left: var(--page-margin);
     margin-right: var(--page-margin);
   }
