@@ -789,6 +789,8 @@ overflow: auto;
 .post__page .cards-wrapper {
   margin-left: 0;
   margin-right: 0;
+  display: flex;
+  flex-wrap: wrap;
 }
 .page, .wrapper {
   min-height: 80vh;
@@ -799,6 +801,7 @@ overflow: auto;
     transition: 0.3s;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     border-radius: 5px;
     margin-right: 1em;
     overflow: hidden;
