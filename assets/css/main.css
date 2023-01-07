@@ -743,6 +743,9 @@ textarea {
   display: none;
 }
 .card_wrapper.circular {
+  border-color: var(--primaryHeaderColor);
+  border-style: solid;
+  border-width: thick;
   border-radius: 50%;
 }
 
