@@ -37,6 +37,7 @@ textarea {
 .amarillo {
   background: var(--primaryHeaderColor);
   padding: 2rem;
+  width: 100vw;
 }
 address {
   font-style: normal;
@@ -788,6 +789,8 @@ overflow: auto;
 .post__page .cards-wrapper {
   margin-left: 0;
   margin-right: 0;
+  display: flex;
+  flex-wrap: wrap;
 }
 .page, .wrapper {
   min-height: 80vh;
@@ -2195,7 +2198,9 @@ a.button {
     margin-top: 0;
   }
   .post__page {
-    margin: .5rem;
+    margin-top: 1rem;
+    margin-left: var(--page-margin);
+    margin-right: var(--page-margin);
   }
 }
 
