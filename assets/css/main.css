@@ -776,6 +776,8 @@ overflow: auto;
 
 .cards-wrapper {
   display: flex;
+  align-items: center;
+  justify-content: center;
   margin-left: var(--page-margin);
   margin-right: var(--page-margin);
   outline: none;
