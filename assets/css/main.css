@@ -759,7 +759,8 @@ textarea {
 .card-title.external {
   font-size: 1.2em;
 }
-.cards .cards__item.external .card-title:hover, .cards .cards__item.external .card-subtitle:hover, .cards .cards__item.external .card-caption:hover {
+.cards .cards__item.external .card-title:hover, .cards .cards__item.external .card-subtitle:hover, .cards .cards__item.external .card-caption:hover,
+.cards .cards__item.external:after, .cards .cards__item.external:hover  {
   text-decoration: none;
 }
 .card_wrapper {
@@ -1928,12 +1929,14 @@ a.button {
   .l-grid {
     -ms-grid-columns: 1fr var(--grid-gap) 1fr var(--grid-gap) 1fr;
     grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 3rem;
   }
 }
 @media all and (min-width: 75em) {
   .l-grid {
     -ms-grid-columns: 1fr var(--grid-gap) 1fr var(--grid-gap) 1fr var(--grid-gap) 1fr;
     grid-template-columns: repeat(4, 1fr);
+    margin-bottom: 3rem;
   }
 }
 @media all and (min-width: 75em) {
@@ -2810,6 +2813,10 @@ a.button {
 }
 .footer a:hover {
   color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+}
+.footer .grid h4 {
+  font-size: 1.3em;
 }
 .footer__copyright {
   color: var(--gray-2);
