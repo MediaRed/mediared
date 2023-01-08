@@ -698,6 +698,11 @@ textarea {
 /*
  * Put your custom CSS code here
  */
+ .cards-colorpicker > input, .cards-colorpicker > input:after {
+  margin:0;
+  padding: 0;
+  font-size: .8em;
+ }
  .col1 {
   width: 100%;   
  }
