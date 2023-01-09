@@ -1931,6 +1931,7 @@ a.button {
   grid-gap: var(--grid-gap);
   margin: 0;
 }
+
 @media all and (min-width: 37.5em) {
   .l-grid {
     -ms-grid-columns: 1fr var(--grid-gap) 1fr;
@@ -1948,6 +1949,11 @@ a.button {
   .l-grid {
     -ms-grid-columns: 1fr var(--grid-gap) 1fr var(--grid-gap) 1fr var(--grid-gap) 1fr;
     grid-template-columns: repeat(4, 1fr);
+    margin-bottom: 3rem;
+  }
+  .l-grid.Servicios {
+    -ms-grid-columns: 1fr var(--grid-gap) 1fr var(--grid-gap) 1fr var(--grid-gap) 1fr;
+    grid-template-columns: repeat(3, 1fr);
     margin-bottom: 3rem;
   }
 }

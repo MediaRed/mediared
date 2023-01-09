@@ -57,7 +57,7 @@
          {{/featuredImage}}
       {{/tag}}
    </div>
-   <div class="l-grid l-grid--{{@config.custom.layoutTags}}">
+   <div class="l-grid l-grid--{{@config.custom.layoutTags}} {{tag.name}}">
       {{#each posts}}
          <article class="c-card">
             {{#featuredImage}}
