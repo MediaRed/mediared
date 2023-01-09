@@ -758,7 +758,18 @@ textarea {
 .card_wrapper.circular:hover {
   border: solid .3rem var(--primaryHeaderColor);
 }
-
+.card_wrapper.icon {
+  margin-left: 40%;
+  margin-right: 40%;
+  min-height: 10vh;
+}
+.cards__item.icon > img {
+  width: 100%;
+  position: inherit;
+  height: inherit;
+  z-index: 3;
+  overflow: hidden;
+}
 .cards__item.external , .card-title.external, .card-subtitle.external, .card-caption.external, .card_image.external {
   aspect-ratio: unset;
   text-shadow: unset;
@@ -855,13 +866,18 @@ overflow: auto;
   width: 100%;
 }
 .cards__item:hover img {
-  -webkit-transform: scale(1.6) rotate(-10deg);
-          transform: scale(1.6) rotate(-10deg);
+  -webkit-transform: scale(1.3) rotate(-10deg);
+          transform: scale(1.3) rotate(-10deg);
+          overflow: hidden;
+}
+.cards__item.icon:hover img {
+  -webkit-transform: none;
+          transform: none;
           overflow: hidden;
 }
 .hero__image:hover img {
-  -webkit-transform: scale(1.6) rotate(0deg);
-          transform: scale(1.6) rotate(0deg);
+  -webkit-transform: scale(1.3) rotate(0deg);
+          transform: scale(1.3) rotate(0deg);
           overflow: hidden;
 }
 .cards__item a > img {
