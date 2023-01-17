@@ -17,9 +17,12 @@
                      </p>                    
                   {{/if}} 
                {{/if}}
-               <h1>
-                  {{title}}
-               </h1>
+
+                  <h1 
+                     :class="{{title}}" 
+                     v-if="title !== 'inicio'">
+                     {{title}}
+                  </h1>
                {{#if @config.post.displayAuthor}}
                   <address>
                      {{ translate 'post.publishedBy' }}

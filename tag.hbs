@@ -8,11 +8,7 @@
                {{name}}
                <sup>({{postsNumber}})</sup>
             </h1>
-            {{#if description}}
-               <p>
-                  {{description}}
-               </p>
-            {{/if}}
+           
          </header>
          {{#featuredImage}}
             {{#if url}}
@@ -57,6 +53,11 @@
          {{/featuredImage}}
       {{/tag}}
    </div>
+    {{#if description}}
+      <div class="description">
+         {{description}}
+      </div>
+   {{/if}}
    <div class="l-grid l-grid--{{@config.custom.layoutTags}} {{tag.name}}">
       {{#each posts}}
          <article class="c-card">

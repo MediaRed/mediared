@@ -39,9 +39,11 @@
             
              <div class="wrap-inner">
                 <header class="post-header">
-                    <h1>
-                        {{title}}
-                    </h1>
+                     <h1 
+                     :class="{{title}}" 
+                     v-if="title !== 'inicio'">
+                     {{title}}
+                  </h1>
                     {{#checkIfAny @config.post.displayDate @config.post.displayAuthor}}
                         <p class="post-meta">
                             {{#if @config.post.displayAuthor}}
