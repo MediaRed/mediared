@@ -83,7 +83,8 @@
         relatedContainerForOverlayMenuSelector: '.top',
    };
 </script>
-<script defer src="{{js "scripts.min.js"}}"></script>
+<script defer src="{{js 'scripts.min.js'}}"></script>
+<script defer src="{{js 'isImageUrl.js'}}"></script>
 {{#if @config.site.mediaLazyLoad}}
     <script>        
         var images = document.querySelectorAll('img[loading]');

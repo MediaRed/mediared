@@ -1,7 +1,7 @@
 <main>
    {{#getPost @config.custom.frontPost}}
       <article class="post wrapper">
-         <div class="hero {{@config.custom.widthHero}}">
+         <div class="hero {{@config.custom.widthHero}}" v-if="url">
             <header>
                {{#if postViewConfig.displayCategoryName}}
                    {{#if mainTag}}

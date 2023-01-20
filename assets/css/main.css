@@ -21,7 +21,26 @@ section {
 li {
   list-style: none;
 }
-
+.glide__slides {
+  padding: 0;
+  list-style-type: none;
+}
+.container header, .container, .container main {
+  margin: 0;
+  padding: 0;
+}
+.container header:after, .container:after, .container main:after {
+  margin: 0;
+  padding: 0;
+}
+.container header:before, .container:before, .container main:before {
+  margin: 0;
+  padding: 0;
+}
+.container main {
+  margin-top: -1.7rem;
+  padding:0;
+}
 img {
   height: auto;
   max-width: 100%;
@@ -130,6 +149,8 @@ body {
   overscroll-behavior: none;
 }
 .header {
+  margin: 0;
+  padding: 0;
   height: var(--header-height);
   background: var(--primaryHeaderColor);
   color: var(--primaryHeaderTextColor);
@@ -698,7 +719,17 @@ textarea {
 /*
  * Put your custom CSS code here
  */
- .cards-colorpicker > input, .cards-colorpicker > input:after {
+
+.post__page:first-child .gallery-wrapper {
+  margin: 0;
+}
+.post__page:first-child .gallery-wrapper {
+  margin: 0;
+}
+.post__page > .gallery-wrapper:first-child ~ .post__page {
+  margin: 0;
+}
+.cards-colorpicker > input, .cards-colorpicker > input:after {
   margin:0;
   padding: 0;
   font-size: .8em;
@@ -798,7 +829,7 @@ div.slider {
   width: inherit; 
   float: left; 
 }
-div.slider .slide { 
+div.slider .glide__slide { 
     position: relative;
     display: flex;
     align-items: center;
@@ -807,6 +838,7 @@ div.slider .slide {
     flex-direction: row;
     width: inherit;
     margin: 0;
+    height: var(--hero-max-height);
     left: 0;
     text-align: left;
     font-size: 0;
@@ -1816,6 +1848,12 @@ a.button {
   .post__page {
     margin: .5rem;
   }
+  .post__page:first-child .gallery-wrapper {
+    margin: 0;
+  }
+  .post__page > .gallery-wrapper:first-child ~ .post__page {
+    margin: 0;
+  }
   .col2 {
     min-width: 100%;
   }
@@ -2304,15 +2342,23 @@ a.button {
   margin: calc(3rem + 1.5vw);
 }
 @media all and (min-width: 56.25em) {
-  .post__entry {
-    margin-top: 0;
-  }
+
   .post__page {
     margin-top: 1rem;
     margin-bottom: 1rem;
     margin-left: var(--page-margin);
     margin-right: var(--page-margin);
   }
+  .post__entry {
+    margin: 0;
+  }
+  .post__page:first-child .gallery-wrapper {
+    margin: 0;
+  }
+  .post__page > .gallery-wrapper:first-child ~ .post__page {
+    margin: 0;
+  }
+  
 }
 
 .post__entry > :nth-child(1) {
