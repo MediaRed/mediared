@@ -781,6 +781,50 @@ textarea {
 .cards .cards__item.external:after, .cards .cards__item.external:hover  {
   text-decoration: none;
 }
+
+div.slider { 
+  overflow: hidden; 
+  width: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: stretch;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+.glide__slide > a {
+  width: inherit;
+} 
+.glide__slide > a > img { 
+  width: inherit; 
+  float: left; 
+}
+div.slider .slide { 
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: stretch;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    width: inherit;
+    margin: 0;
+    left: 0;
+    text-align: left;
+    font-size: 0;
+}
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+.w-100 {
+  width: 100%;
+}
+.ml-auto, .mx-auto {
+  margin-left: auto;
+}
+.mr-auto, .mx-auto {
+  margin-right: auto;
+}
+  
 .card_wrapper {
   min-height: 20vh;
   display:flex;

@@ -86,11 +86,18 @@
                </style>	
             {{/is}}	
           {{/checkIf}}
-        {{/checkIf}}        
+        {{/checkIf}}
+        <!-- Required Core Stylesheet -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
+
+        <!-- Optional Theme Stylesheet -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css">    
+        <script src="https://cdn.jsdelivr.net/npm//@glidejs/glide/dist/glide.min.js"></script>
+
+        <script>
+            new Glide('.glide').mount()
+        </script>
         {{{@headCustomCode}}}
     </head>
     <body>
         {{{@bodyCustomCode}}}
-
-
-
