@@ -23,7 +23,23 @@ li {
 }
 .glide__slides {
   padding: 0;
+  margin:0;
   list-style-type: none;
+}
+.glide__slide.col1 {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.glide__slide.col2 {
+  width: 48%;
+  margin: 0;
+  padding: 0;
+}
+.glide__slide.col3 {
+  width: 30%;
+  margin: 0;
+  padding: 0;
 }
 .container header, .container, .container main {
   margin: 0;
@@ -38,7 +54,7 @@ li {
   padding: 0;
 }
 .container main {
-  margin-top: -1.7rem;
+  margin-top: -4.3vh;
   padding:0;
 }
 img {
@@ -839,7 +855,7 @@ div.slider .glide__slide {
     width: inherit;
     margin: 0;
     height: var(--hero-max-height);
-    left: 0;
+    left: -5px;
     text-align: left;
     font-size: 0;
 }

@@ -1,115 +1,68 @@
 {{> head}}
 {{> top}}
 <main>
-   {{#if @customHTML.beforePost}}
-      <div class="banner banner--before-post">
-         {{{@customHTML.beforePost }}}
-      </div>
-   {{/if}}
-   {{#post}}
-   {{#if isImageUrl}}
-      {{#if (isImageUrl url)}}
-        <article class="post wrapper image">
-      {{else}}
-        <article class="post wrapper no-hero">
-      {{/if}}
-    {{else}}
-      <article class="post wrapper">
-    {{/if}}
-          {{#if isImageUrl}}
-            {{#if (isImageUrl url)}}
-            <div class="hero {{@config.custom.widthHero}}" >
-                {{ url}}
-                <header>
-                  {{#if @config.post.displayCategoryName}}                
-                      {{#if mainTag}}
-                        <p>
-                            <a href="{{mainTag.url}}" title="{{name}}">{{mainTag.name }}</a>
-                        </p>                    
-                      {{/if}} 
+{{#if @customHTML.beforePost}}
+  <div class="banner banner--before-post">
+    {{{@customHTML.beforePost }}}
+  </div>
+{{/if}}
+{{#post}}
+  
+{{#if featuredImage}}
+   <article class="post wrapper {{#if (isImageUrl featuredImage.url)}}image{{else}}no-hero{{/if}}">
+      {{#if (isImageUrl featuredImage.url)}}
+         <div class="hero {{@config.custom.widthHero}}" >
+            <figure class="hero__image post__featured-image">
+               <img src="{{featuredImage.url}}" alt="{{featuredImage.alt}}">
+               {{#if featuredImage.caption}}
+                  <figcaption>{{featuredImage.caption}}</figcaption>
+               {{/if}}
+            </figure>
+            <header>
+               {{#if @config.post.displayCategoryName}}
+                  {{#if featuredImage.mainTag}}
+                     <p><a href="{{featuredImage.mainTag.url}}" title="{{featuredImage.mainTag.name}}">{{featuredImage.mainTag.name}}</a></p>
                   {{/if}}
-
-                      <h1 
-                        :class="{{title}}" 
-                        v-if="title !== 'inicio'">
-                        {{title}}
-                      </h1>
-                  {{#if @config.post.displayAuthor}}
-                      <address>
-                        {{ translate 'post.publishedBy' }}
-                        {{#author}}
-                            <a href="{{url}}" rel="author">{{name}}</a>
-                        {{/author}}
-                      </address>
-                  {{/if}}
-                  {{#if @config.post.displayDate}}
-                      {{ translate 'post.publishedOn' }}
-                      <time datetime="{{date createdAt 'YYYY-MM-DDTHH:mm'}}">
-                        {{#checkIf @config.custom.formatDate '!=' 'custom'}}
-                            {{date createdAt @config.custom.formatDate}}
-                        {{else}}
-                            {{date createdAt @config.custom.formatDateCustom}}
-                        {{/checkIf}}
-                      </time>
-                  {{/if}}
-                </header>
-                {{#featuredImage}}
-                  {{#if isImageUrl}}
-                      {{#if (isImageUrl url)}}
-                        <figure class="hero__image post__featured-image">
-                            <img
-                            src="{{url}}"
-                            {{#if @config.site.responsiveImages}}
-                              {{responsiveImageAttributes 'featuredImage' srcset.post sizes.post}}
-                            {{/if}}
-                            {{ lazyload "eager" }}
-                            height="{{height}}"
-                            width="{{width}}"
-                            alt="{{alt}}">
-
-                            {{#checkIfAny caption credits}}
-                            <figcaption>
-                              {{caption}}
-                              {{credits}}
-                            </figcaption>                      
-                            {{/checkIfAny}}
-                        </figure>
-                      {{else}}
-                        {{! Do something else}}
-                      {{/if}}
-                      {{else}}
-                      {{! Do something else}}
-                      {{/if}}
-                  {{else}}
-                      {{#checkIfAll @config.custom.uploadHero @config.custom.displayHeroImage}}
-                        <figure class="hero__image post__featured-image">
-                            <img
-                              src="{{@config.custom.uploadHero}}"
-                              {{#if @config.site.responsiveImages}}
-                                {{responsiveImageAttributes @config.custom.uploadHero}}
-                              {{/if}}
-                              {{ lazyload "eager" }}
-                              {{imageDimensions @config.custom.uploadHero}}
-                              alt="{{@config.custom.uploadHeroAlt}}">
-
-                          {{#if @config.custom.uploadHeroCaption}}
-                              <figcaption>
-                                {{@config.custom.uploadHeroCaption}}
-                              </figcaption>
-                          {{/if}}
-                        </figure>
-                      {{/checkIfAll}}
-                {{/featuredImage}}
-            </div>
-            {{else}}
-            {{! Do something else}}
-            {{/if}}
-            {{else}}
-            {{! Do something else}}
-            {{/if}}
-         <div class="post__entry post__page">            
-            {{{text}}}          
+               {{/if}}
+               <h1 
+                  :class="{{title}}" 
+                  v-if="title !== 'inicio'">
+                  {{title}}
+               </h1>
+               {{#if @config.post.displayAuthor}}
+                  <address>
+                     {{ translate 'post.publishedBy' }}
+                     {{#author}}
+                        <a href="{{url}}" rel="author">{{name}}</a>
+                     {{/author}}
+                  </address>
+               {{/if}}
+               {{#if @config.post.displayDate}}
+                  {{ translate 'post.publishedOn' }}
+                  <time datetime="{{date createdAt 'YYYY-MM-DDTHH:mm'}}">
+                     {{date createdAt @config.custom.formatDate}}
+                  </time>
+               {{/if}}
+            </header>
          </div>
+      {{else}}
+         {{#if @config.custom.uploadHero}}
+            <figure class="hero__image post__featured-image">
+               <img src="{{@config.custom.uploadHero}}" alt="{{@config.custom.uploadHeroAlt}}">
+               {{#if @config.custom.uploadHeroCaption}}
+                  <figcaption>{{@config.custom.uploadHeroCaption}}</figcaption>
+               {{/if}}
+            </figure>
+         {{/if}}
+      {{/if}}
+   </article>
+{{else}}
+   {{! Do something else}}
+{{/if}}
+
+   <div class="post__entry post__page">            
+   {{{text}}}          
+   </div>
          {{#checkIfAny @config.post.displayLastUpdatedDate @config.post.displayShareButtons}}
             <aside>
                {{#if @config.post.displayLastUpdatedDate}}
