@@ -22,6 +22,7 @@ li {
   list-style: none;
 }
 .glide__slides {
+  width: var(--page-width);
   padding: 0;
   margin:0;
   list-style-type: none;
@@ -71,8 +72,12 @@ textarea {
 }
 .amarillo {
   background: var(--primaryHeaderColor);
-  padding: 2rem;
+  padding-top: 1rem;
+  padding-left: var(--page-margin);
+  padding-right: var(--page-margin);
+  padding-bottom: 1rem;
   width: 100vw;
+  margin: 0;
 }
 address {
   font-style: normal;
@@ -735,14 +740,18 @@ textarea {
 /*
  * Put your custom CSS code here
  */
-
-.post__page:first-child .gallery-wrapper {
+.post__entry.home .gallery-wrapper .gallery .slider {
+  width: var(--page-width);
+ }
+.post__page:first-child .gallery-wrapper, .post__entry.home:first-child .gallery-wrapper  {
+  margin: 0;
+  width: var(--page-width);
+}
+.post__page > .gallery-wrapper:first-child ~ .post__page, .post__entry.home > .gallery-wrapper:first-child ~ .post__entry.home {
   margin: 0;
 }
-.post__page:first-child .gallery-wrapper {
-  margin: 0;
-}
-.post__page > .gallery-wrapper:first-child ~ .post__page {
+.gallery {
+  width: var(--page-width);
   margin: 0;
 }
 .cards-colorpicker > input, .cards-colorpicker > input:after {
@@ -831,19 +840,18 @@ textarea {
 
 div.slider { 
   overflow: hidden; 
-  width: inherit;
+  width: var(--page-width);
   display: flex;
   align-items: center;
   justify-content: stretch;
   flex-wrap: nowrap;
   flex-direction: row;
 }
-.glide__slide > a {
-  width: inherit;
-} 
+.glide__slide > { 
+  width: var(--page-width); 
+}
 .glide__slide > a > img { 
-  width: inherit; 
-  float: left; 
+  width: var(--page-width); 
 }
 div.slider .glide__slide { 
     position: relative;
@@ -852,27 +860,13 @@ div.slider .glide__slide {
     justify-content: stretch;
     flex-wrap: nowrap;
     flex-direction: row;
-    width: inherit;
     margin: 0;
     height: var(--hero-max-height);
     left: -5px;
     text-align: left;
     font-size: 0;
 }
-.img-fluid {
-  max-width: 100%;
-  height: auto;
-}
-.w-100 {
-  width: 100%;
-}
-.ml-auto, .mx-auto {
-  margin-left: auto;
-}
-.mr-auto, .mx-auto {
-  margin-right: auto;
-}
-  
+
 .card_wrapper {
   min-height: 20vh;
   display:flex;
@@ -1864,10 +1858,18 @@ a.button {
   .post__page {
     margin: .5rem;
   }
-  .post__page:first-child .gallery-wrapper {
+  .post__entry.home .gallery-wrapper .gallery .slider {
+    width: var(--page-width);
+   }
+  .post__page:first-child .gallery-wrapper, .post__entry.home:first-child .gallery-wrapper  {
+    margin: 0;
+    width: var(--page-width);
+  }
+  .post__page > .gallery-wrapper:first-child ~ .post__page, .post__entry.home > .gallery-wrapper:first-child ~ .post__entry.home {
     margin: 0;
   }
-  .post__page > .gallery-wrapper:first-child ~ .post__page {
+  .gallery {
+    width: var(--page-width);
     margin: 0;
   }
   .col2 {
@@ -2374,10 +2376,18 @@ a.button {
   .post__entry {
     margin: 0;
   }
-  .post__page:first-child .gallery-wrapper {
+  .post__entry.home .gallery-wrapper .gallery .slider {
+    width: var(--page-width);
+   }
+  .post__page:first-child .gallery-wrapper, .post__entry.home:first-child .gallery-wrapper  {
+    margin: 0;
+    width: var(--page-width);
+  }
+  .post__page > .gallery-wrapper:first-child ~ .post__page, .post__entry.home > .gallery-wrapper:first-child ~ .post__entry.home {
     margin: 0;
   }
-  .post__page > .gallery-wrapper:first-child ~ .post__page {
+  .gallery {
+    width: var(--page-width);
     margin: 0;
   }
   
@@ -2791,11 +2801,9 @@ a.button {
   margin-left: 0.5rem;
 }
 
-.gallery {
-  margin: calc(1rem + 1vw) -0.5rem;
-}
 @media all and (min-width: 20em) {
   .gallery {
+    width: var(--page-width);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
