@@ -49,13 +49,13 @@
 								{{/checkIfAny}}
 							</figure>
 						</div>
-						{{/if}}
-					{{else}}
+					{{/if}}
+				{{else}}
 					{{#checkIfAll @config.custom.uploadHero @config.custom.displayHeroImage}}
 						<div class="hero {{@config.custom.widthHero}}" >
-						  <figure class="hero__image post__featured-image">
+							<figure class="hero__image post__featured-image">
 								<img
-							   	src="{{@config.custom.uploadHero}}"
+									src="{{@config.custom.uploadHero}}"
 									{{#if @config.site.responsiveImages}}
 										{{responsiveImageAttributes @config.custom.uploadHero}}
 									{{/if}}
@@ -64,14 +64,14 @@
 									alt="{{@config.custom.uploadHeroAlt}}">
 
 								{{#if @config.custom.uploadHeroCaption}}
-								  <figcaption>
+									<figcaption>
 										{{@config.custom.uploadHeroCaption}}
-								  </figcaption>
+									</figcaption>
 								{{/if}}
 							</figure>
 						</div>
 					{{/checkIfAll}}
-				 {{/if}}
+				{{/if}}
 			{{/featuredImage}} 
 				 
 			<div class="post__content">
