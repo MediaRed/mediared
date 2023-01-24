@@ -7,9 +7,8 @@
   </div>
 {{/if}}
 {{#post}}
-{{#if featuredImage}}
-   {{featuredImage.url}}
-   <article class="post wrapper {{#if (isImageUrl featuredImage.url)}}image{{else}}no-hero{{/if}}">
+   <article class="post wrapper">
+   {{#featuredImage}}
       {{#if (isImageUrl featuredImage.url)}}
          <div class="hero {{@config.custom.widthHero}}" >
             <header>
@@ -64,10 +63,7 @@
             </figure>
          {{/if}}
       {{/if}}
-   </article>
-{{else}}
-   {{! Do something else}}
-{{/if}}
+   {{/featuredImage}}
 
    <div class="post__entry post__page">            
    {{{text}}}          

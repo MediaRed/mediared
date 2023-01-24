@@ -2368,12 +2368,12 @@ a.button {
 @media all and (min-width: 56.25em) {
 
   .post__page {
-    margin-top: 1rem;
+    margin-top: 1em;
     margin-bottom: 1rem;
     margin-left: var(--page-margin);
     margin-right: var(--page-margin);
   }
-  .post__entry {
+  .post__entry.home {
     margin: 0;
   }
   .post__entry.home .gallery-wrapper .gallery .slider {
@@ -2393,7 +2393,7 @@ a.button {
   
 }
 
-.post__entry > :nth-child(1) {
+.post__entry.home > :nth-child(1) {
   margin-top: 0;
 }
 .post__entry a:not(.btn):not([type=button]):not([type=submit]):not(button):hover {

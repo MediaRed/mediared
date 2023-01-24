@@ -1,11 +1,10 @@
 <main>
-   {{#getPost @config.custom.frontPost}}
-      <article class="post wrapper">
-         
-						{{#featuredImage}}
-               {{#if url}}
-							 <div class="hero {{@config.custom.widthHero}}"></div>
-            <header>
+  {{#getPost @config.custom.frontPost}}
+    <article class="post wrapper home">
+			{{#featuredImage}}
+        {{#if url}}
+					 <div class="hero {{@config.custom.widthHero}} home">
+        	    <header>
                {{#if postViewConfig.displayCategoryName}}
                    {{#if mainTag}}
                      <p>
@@ -58,7 +57,7 @@
                {{else}}
 							 
                   {{#checkIfAll @config.custom.uploadHero @config.custom.displayHeroImage}}
-									<div class="hero {{@config.custom.widthHero}}"></div>
+									<div class="hero {{@config.custom.widthHero}}">
                      <figure class="hero__image post__featured-image">
                         <img
                           src="{{@config.custom.uploadHero}}"
@@ -80,7 +79,7 @@
                {{/if}}
             {{/featuredImage}}
          
-         <div class="post__entry">
+         <div class="post__entry home">
             {{{text}}} 
          </div>
          {{#checkIfAny postViewConfig.displayLastUpdatedDate postViewConfig.displayShareButtons}}
