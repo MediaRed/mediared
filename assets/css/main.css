@@ -837,7 +837,9 @@ textarea {
 .cards .cards__item.external:after, .cards .cards__item.external:hover  {
   text-decoration: none;
 }
-
+.justificado {
+  text-align: justify;
+}
 div.slider { 
   overflow: hidden; 
   width: var(--page-width);
