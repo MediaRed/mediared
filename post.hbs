@@ -9,7 +9,7 @@
 {{#post}}
    <article class="post wrapper">
    {{#featuredImage}}
-      {{#if (isImageUrl featuredImage.url)}}
+      {{#if url}}
          <div class="hero {{@config.custom.widthHero}}" >
             <header>
                {{#if @config.post.displayCategoryName}}
