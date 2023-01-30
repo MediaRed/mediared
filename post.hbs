@@ -17,9 +17,7 @@
                      <p><a href="{{featuredImage.mainTag.url}}" title="{{featuredImage.mainTag.name}}">{{featuredImage.mainTag.name}}</a></p>
                   {{/if}}
                {{/if}}
-               <h1 
-                  :class="{{title}}" 
-                  v-if="title !== 'inicio'">
+               <h1 :class="{{title}}">
                   {{title}}
                </h1>
                {{#if @config.post.displayAuthor}}
