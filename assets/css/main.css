@@ -886,13 +886,9 @@ position: inherit;
 aspect-ratio: unset;
 overflow: auto;
 }
-.card_link.external > div.card_wrapper > h3,.card_link.external > div.card_wrapper > h6, .card-caption.external  {
-  text-decoration: none;
-  &:hover : {
-    text-decoration: none;
-  } 
 
-}
+.card_link.external:hover, 
+  .card_link.external:hover > *:hover { text-decoration: none !important; }
 .external {
 max-height: auto;
 aspect-ratio: unset;

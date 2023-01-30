@@ -17,9 +17,15 @@
                      <p><a href="{{featuredImage.mainTag.url}}" title="{{featuredImage.mainTag.name}}">{{featuredImage.mainTag.name}}</a></p>
                   {{/if}}
                {{/if}}
-               <h1 :class="{{title}}">
-                  {{title}}
-               </h1>
+      {{/if}}
+	{{/featuredImage}}
+               {{! post title }}
+                  <h1 class="title">
+                     {{title}}
+                  </h1>
+               {{! /post title }}
+   {{#featuredImage}}
+      {{#if url}}
                {{#if @config.post.displayAuthor}}
                   <address>
                      {{ translate 'post.publishedBy' }}
@@ -62,9 +68,8 @@
          {{/if}}
       {{/if}}
    {{/featuredImage}}
-
    <div class="post__entry post__page">            
-   {{{text}}}          
+  	 {{{text}}}          
    </div>
          {{#checkIfAny @config.post.displayLastUpdatedDate @config.post.displayShareButtons}}
             <aside>
