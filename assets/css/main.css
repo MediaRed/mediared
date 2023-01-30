@@ -851,11 +851,12 @@ div.slider {
 }
 .glide__slide > a { 
   width: var(--page-width); 
-  display: block;
-  width: inherit;
+  height: inherit;
+  display: inline-flex;
 }
 .glide__slide > a > img { 
   width: var(--page-width); 
+  object-fit: cover;
 }
 div.slider .glide__slide { 
     /* position: relative;
